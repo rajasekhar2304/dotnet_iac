@@ -15,5 +15,11 @@ pipeline {
                 }
             }
         }
+        stage("Build") {
+            steps {
+                sh "dotnet clean"
+                sh "dotnet build"
+            }
+        }
     }
 }    
